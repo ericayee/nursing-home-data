@@ -35,8 +35,7 @@ ui <- fluidPage(
     titlePanel("Licensed and Certified Healthcare Facility Listing"),
 
     # data source
-    p("data from California Department of Public Health:"),
-    a("https://data.ca.gov/dataset/licensed-and-certified-healthcare-facility-listing"),
+    p("data from ", tags$a(href="https://data.ca.gov/dataset/licensed-and-certified-healthcare-facility-listing", "California Department of Public Health")),
     
     # main table
     DT::dataTableOutput("mytable"),
