@@ -1,0 +1,12 @@
+name: ca-healthcare-facilities
+title: ca-healthcare-facilities
+username:
+account: ericayee
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2404354
+bundleId: 3225505
+url: https://ericayee.shinyapps.io/ca-healthcare-facilities/
+when: 1591220739.83999
+asMultiple: FALSE
+asStatic: FALSE

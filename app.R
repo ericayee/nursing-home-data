@@ -36,7 +36,7 @@ ui <- fluidPage(
 
     # data source
     p("data from ", tags$a(href="https://data.ca.gov/dataset/licensed-and-certified-healthcare-facility-listing", "California Department of Public Health")),
-    
+    p("or from (with better data view)", tags$a(href="https://data.chhs.ca.gov/dataset/healthcare-facility-locations/resource/0a0476ba-442c-40ff-97dc-dc840fa7e907", "CHHS Open Data")),
     # main table
     DT::dataTableOutput("mytable"),
     
