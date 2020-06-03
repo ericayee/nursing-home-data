@@ -1,0 +1,131 @@
+﻿VARIABLE,FORMAT,DEFINITION
+FACID,String,"FACID is a nine-digit identifier. It is the primary key from the FACILITY table used to track facility information for all facilities stored in the Electronic Licensing Management System (ELMS) for CDPH Center of Healthcare Quality, Licensing and Certification Program.  FACID can be used to link this file's facility attributes to the following Open Data files: Healthcare Facility Services and Healthcare Facility Bed Types and Counts. Note: Please review document called ""Leading Zero variables"" how to import the .csv file to an excel file without losing the leading zero. "
+NPI,Numeric ,"The National Provider Identifier (NPI) is a Health Insurance Portability and Accountability Act (HIPAA) Administrative Simplification Standard (1996, 2006), that health care providers, all health plans, and health care clearinghouses must use in administrative and financial transactions adopted under HIPAA. The NPI is a 10-digit unique, intelligence-free, identification number that does not carry other information about the healthcare providers, such as the state in which they operate or their medical specialty.  CDPH requests that providers submit one NPI as part of their application for licensure/certification.    "
+FACNAME,String,"FACNAME is the facility name in the FACILITY table in ELMS, obtained from the facility's license application form."
+FAC_TYPE_CODE,String ,"Facility type acronym (GACH, SNF, HHA, etc.) See Lookup table."
+FAC_FDR,String ,The facility type roll-up that is used in the Licensing and Certification Fee Development Report and is based on licensure facility types used in the ELMS system. See Lookup table. 
+LTC,String ,"Indicates whether the facility is a long-term care facility.  Values include: 1_LTC, 2_Non-LTC, 3_Other."
+CAPACITY,Numeric ,"CAPACITY is the same as TOTAL_CAPACITY in the FACILITY table in ELMS, referring to the number of licensed beds, and obtained from the Facility's license application form."
+ADDRESS,String ,"ADDRESS is the same as FAC_ADDRESS1 in the FACILITY table in ELMS, obtained from the facility's license application form."
+CITY,String ,"CITY is the same as FAC_CITY in the FACILITY table in ELMS, obtained from the facility's license application form."
+ZIP,String ,"ZIP is the same as FAC_ZIP5 in the FACILITY table in ELMS, obtained from the facility's license application form."
+ZIP9,String,"ZIP9 is the same as FAC_ZIP4 in the FACILITY table in ELMS, obtained from the facility's license application form."
+FACADMIN,String ,Facility administrator.
+CONTACT_EMAIL,String ,Facility administrator's e-mail.
+CONTACT_FAX,String ,Facility administrator's fax number.
+CONTACT_PHONE_NUMBER,String ,Facility administrator's phone number.
+COUNTY_CODE,String ,"The description/label for the county where the facility is located. Note: Please review document called ""Leading Zero variables"" how to import the .csv file to an excel file without losing the leading zero. See Lookup table."
+COUNTY_NAME,String ,"COUNTY is the name of the County where the facility is located, derived from COUNTY_CODE in the FACILITY table in ELMS, obtained from the Facility's license application form."
+DISTRICT_NUMBER,String,The code of the California Department of Public Health District Office that oversees the facility.
+DISTRICT_NAME,String ,The name of the California Department of Public Health District Office that oversees the facility. See Lookup table.
+ISFACMAIN,String ,"Identify if the facility is main or distinct part facility.  Main = ""Y"" and distinct part = ""N"""
+LICENSE_NUMBER,String ,"License number is a nine-digit identifier. A CDPH facility/provider license number identifies that a health care facility/provider operates within state statute/regulations and can legally do business in California. Note: Please review document called ""Leading Zero variables"" how to import the .csv file to an excel file without losing the leading zero."
+BUSINESS_NAME,String ,Business Name of the Licensee.
+INITIAL_LICENSE_DATE,Date ,Date the facility license was first issued. This field is blank for facilities that are certified only.
+LICENSE_EFFECTIVE_DATE,Date ,Current license effective date.  This field is blank for facilities that are certified only.
+LICENSE_EXPIRATION_DATE,Date,License Expiration Date
+ENTITY_TYPE_DESCRIPTION,String,License Type - See Lookup table. 
+LATITUDE,Numeric ,"Latitude for the facility in decimal degrees (WGS 1984 Web Mercator Auxiliary Sphere; WKID: 3857; Authority: EPSG.)  Geocoded with CDPH geocoding service (Esri: StreetMap Premium, NAVTEQ data)."
+LONGITUDE,Numeric,"Longitude for the facility in decimal degrees (WGS 1984 Web Mercator Auxiliary Sphere; WKID: 3857; Authority: EPSG.)  Geocoded with CDPH geocoding service (Esri: StreetMap Premium, NAVTEQ data)."
+LOCATION,String ,"Latitude and longitude for the service, combined by Socrata for mapping.  Format is (latitude, longitude)."
+OSHPD_ID,String ,"A unique nine-digit identifier assigned to each facility by the Office of Statewide Health Planning and Development. OSHPD’s financial and utilization databases begin with a 3-digit number that indicates the “type of facility” (106=hospital, 206=long term care, 306 = clinic, 406 = home health/hospice agency). The next two digits indicate the county in which the facility is located. The last four digits are unique within each county. Data Source: https://data.chhs.ca.gov/ Data Definition: http://www.oshpd.ca.gov/HID/Data_Request_Center/Data_Documentation.html"
+StreetNum,String,Street number part of ADDRESS. 
+StreetName,String,Street name and street type part of ADDRESS.
+CCLHO_Code,String,"The California Conference of Local Health Officers (CCLHO) is an organization of the 61 legally appointed city and county physician Health Officers in California established in 1947 by statute (California Health and Safety Code Sections 100290, 100295, 100925 and 100950) to advise the Department of Health Services (now Department of Public Health), other departments, boards, commissions, and officials of federal, state and local agencies, the Legislature and other organizations on all matters affecting health.  As such CCLHO communications are solely the responsibility of this organization and do not necessarily represent the official views of the California Department of Public Health, the California Health and Human Services Agency or the California State Government. Data Definition: http://www.cdph.ca.gov/programs/CCLHO/Pages/default.aspx"
+CCLHO_Name,String,Local Health Jurisdiction Name. See Lookup table.
+FIPS_County_Code,String,"The FIPS county code is a five-digit Federal Information Processing Standard (FIPS) code (FIPS 6-4) which uniquely identifies counties and county equivalents in the United States, certain U.S. possessions, and certain freely associated states. California FIPS Code is '06'. "
+BIRTHING_FACILITY_FLAG,String,"This flag identifies facilities that are licensed to provide birthing services.   The column “FAC_FDR” can be used to filter between “Alternative Birthing Centers (ABC)” and “General Acute Care Hospitals (GACH)”.  GACHs are licensed for labor delivery recovery perinatal (LDRP) beds and perinatal beds.  LDRP beds are large private hospital rooms that cover the whole labor/delivery process, LDRP patients will not move to a perinatal bed.  CDPH does not maintain bed counts for ABCs.  GACH bed capacity is available in the CHHS Agency Open Data portal, healthcare_facility_beds.csv, by filtering the “BED_CAPACITY_TYPE” column to “LABOR AND DELIVERY” and “PERINATAL”."
+TRAUMA_CTR,String,Level of Trauma Center from Emergency Medical Services (EMS) Data collected from the 2009-2013 Hospital Annual Utilization Reports. Data Source: http://www.oshpd.ca.gov/HID/Hospital-Utilization.html#Pivot
+TRAUMA_PED_CTR,String,Level of Pediatric Trauma Center from Emergency Medical Services (EMS) Data collected from the 2009-2013 Hospital Annual Utilization Reports. Data Source: http://www.oshpd.ca.gov/HID/Hospital-Utilization.html#Pivot
+TYPE_OF_CARE,String,An indicator of a supplemental type of care provided in the facility.  These care types apply to skilled nursing facilities only.  See lookup table.
+CRITICAL_ACCESS_HOSP,String,"An indicator for whether the facility is a Critical Access Hospital facility. Yes = ""Y"" and No = blank."
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,

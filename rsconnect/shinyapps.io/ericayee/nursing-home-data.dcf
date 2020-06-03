@@ -1,0 +1,12 @@
+name: nursing-home-data
+title: nursing-home-data
+username:
+account: ericayee
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2404279
+bundleId: 3225441
+url: https://ericayee.shinyapps.io/nursing-home-data/
+when: 1591219258.52112
+asMultiple: FALSE
+asStatic: FALSE
